@@ -1,5 +1,72 @@
-$bgColor: rgb(0, 132, 255);
+@use 'hero';
+@use 'variables.scss';
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
 
 body {
-    background-color: $bgColor;
+    background-color: variables.$bgColor;
+}
+
+@mixin text($fontSize: 16px) {
+    font-size: $fontSize;
+    line-height: $fontSize * 1.4;
+    color: variables.$textPrimary;
+    font-family: "Inter", sans-serif;
+    font-weight: 300;
+}
+
+@mixin title($fontSize: 40px) {
+    font-size: $fontSize;
+    line-height: $fontSize * 1.2;
+    color: variables.$textSecondary;
+    font-weight: 700;
+    margin: 1.5rem 0;
+}
+
+.text--big {
+    @include text(18px);
+}
+
+.text {
+    @include text;
+}
+
+.text--small {
+    @include text(12px);
+}
+
+.title--big {
+    @include title(44px);
+}
+
+.title {
+    @include title;
+}
+
+.title--small {
+    @include title(32px);
+    font-weight: 600;
+}
+
+.title--smaller {
+    @include title(24px);
+    color: variables.$textPrimary;
+    margin-top: 0;
+    font-weight: 600;
+}
+
+.title--smaller-white {
+    @include title(24px);
+    font-weight: 600;
+}
+
+
+.link-text {
+    @include text(18px);
+    color: variables.$textSecondary;
+    text-decoration: underline;
 }

@@ -3,10 +3,79 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Clone Disney+</title>
+    <title>Clone Disney+ Brasil | Filmes, séries e esportes ilimitados </title>
     <link rel="stylesheet" href="../dist/css/main.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
+    <link rel="icon" href="../public/favicon.ico" type="image/x-icon">
 </head>
 <body>
-    <h1>Olá</h1>
+    <main>
+        <section class="hero">
+            <div id="heroCarousel" class="carousel slide carousel-fade hero__background" data-bs-ride="carousel">
+                <div class="carousel-indicators">
+                    <button type="button" data-bs-target="#heroCarousel" data-bs-slide-to="0"
+                        class="active" aria-current="true" aria-label="Slide 1"></button>
+                    <button type="button" data-bs-target="#heroCarousel" data-bs-slide-to="1"
+                        aria-label="Slide 2"></button>
+                    <button type="button" data-bs-target="#heroCarousel" data-bs-slide-to="2"
+                        aria-label="Slide 3"></button>
+                    <button type="button" data-bs-target="#heroCarousel" data-bs-slide-to="3"
+                        aria-label="Slide 4"></button>
+                    <button type="button" data-bs-target="#heroCarousel" data-bs-slide-to="4"
+                        aria-label="Slide 5"></button>
+                    <button type="button" data-bs-target="#heroCarousel" data-bs-slide-to="5"
+                        aria-label="Slide 6"></button>
+                </div>
+
+                <div class="carousel-inner">
+                    <div class="carousel-item active">
+                        <img src="../dist/images/carrousel-initial/slide-1.jpg" class="d-block w-100" alt="Slide 1">
+                    </div>
+                    <div class="carousel-item">
+                        <img src="../dist/images/carrousel-initial/slide-2.jpg" class="d-block w-100" alt="Slide 2">
+                    </div>
+                    <div class="carousel-item">
+                        <img src="../dist/images/carrousel-initial/slide-3.jpg" class="d-block w-100" alt="Slide 3">
+                    </div>
+                    <div class="carousel-item">
+                        <img src="../dist/images/carrousel-initial/slide-4.jpg" class="d-block w-100" alt="Slide 4">
+                    </div>
+                    <div class="carousel-item">
+                        <img src="../dist/images/carrousel-initial/slide-5.jpg" class="d-block w-100" alt="Slide 5">
+                    </div>
+                    <div class="carousel-item">
+                        <img src="../dist/images/carrousel-initial/slide-6.jpg" class="d-block w-100" alt="Slide 6">
+                    </div>
+                </div>
+            </div>
+
+            <div class="hero__content">
+                <h1 class="hero__content__branding">
+                    <img src="../src/images/logo/disneyplus.png" alt="Dinsey+">
+                </h1>
+                <h3 class="title--small">Séries exclusivas, sucessos do cinema, esportes com a ESPN e muito mais</h3>
+                <p class="title--smaller">
+                    Escolha um plano a partir de <span class="title--smaller-white">R$ 27,99/mês</span>
+                </p>
+                <p class="text">
+                    Digite o seu e-mail para começar
+                </p>
+                <form action="#" class="hero__content__form">
+                    <input type="email" placeholder="E-mail" class="hero__content__form__input" required>
+                    <button type="submit" class="hero__content__form__button">
+                        <span>Assinar agora</span>
+                    </button>
+                </form>
+                <a href="#" class="link-text">Confira os detalhes dos planos</a>
+                <img src="../src/images/logo/disneyplus_pixar_marvel_starwars_nationalgeographic_espn_hulu.png" alt="Disney, Pixar, Marvel, Star Wars, National Geographic, ESPN e Hulu"
+                    class="hero__content__partners-logos">
+            </div>
+        </section>
+    </main>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
 </body>
 </html>

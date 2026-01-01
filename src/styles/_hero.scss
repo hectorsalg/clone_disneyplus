@@ -1,0 +1,90 @@
+@use 'variables';
+@use "sass:color";
+
+.hero {
+    position: relative;
+    background-size: cover;
+    height: 100vh;
+    overflow: hidden;
+    isolation: isolate;
+
+    .carousel-indicators {
+        z-index: 2;
+    }
+
+    &__background {
+        position: absolute;
+        height: 100%;
+        inset: 0;
+        z-index: 0;
+    }
+
+    &__content {
+        position: absolute;
+        inset: 0;
+        z-index: 1;
+        max-width: 920px;
+        padding: 5.6vw;
+    
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: self-start;
+    
+        pointer-events: none;
+    
+        >* {
+            pointer-events: auto;
+        }
+        
+        &__branding {
+            margin: 0;
+        }
+        
+        &__form {
+            margin-top: 10px;
+            margin-bottom: 1.5rem;
+            display: flex;
+            width: 90%;
+            
+            &__input {
+                background-color: variables.$inputColor;
+                width: 100%;
+                height: 50px;
+                padding: 0.8rem;
+                border: 1px solid #2b2d37;
+                color: color.scale(variables.$textPrimary, $lightness: 90%);
+                font-size: 18px;
+                border-radius: 4px 0 0 4px;
+            }
+            
+            &__button {
+                background-color: variables.$submitButtonColor;
+                color: variables.$textColorSubmit;
+                width: 65%;
+                height: 50px;
+                text-transform: uppercase;
+                letter-spacing: 1.76px;
+                border: none;
+                border-radius: 0 4px 4px 0;
+                font-size: 16px;
+                cursor: pointer;
+                font-size: large;
+                
+                span {
+                    display: block;
+                    padding: 0.8rem 2rem;
+                }
+
+                &:hover {
+                    background-color: color.scale(variables.$submitButtonColor, $lightness: -10%);
+                }
+            }
+        }
+
+        &__partners-logos {
+            margin-top: 1rem;
+            width: 100%;
+        }
+    }
+}
