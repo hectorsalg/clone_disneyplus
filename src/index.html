@@ -7,7 +7,6 @@
     <link rel="stylesheet" href="../dist/css/main.css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
     <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
     <link rel="icon" href="../public/favicon.ico" type="image/x-icon">
@@ -15,7 +14,7 @@
 <body>
     <main>
         <section class="hero">
-            <div id="heroCarousel" class="carousel slide carousel-fade hero__background" data-bs-ride="carousel">
+            <div id="heroCarousel" class="carousel slide carousel-fade hero__background" data-bs-ride="carousel" data-bs-interval="3000" data-bs-pause="false">
                 <div class="carousel-indicators">
                     <button type="button" data-bs-target="#heroCarousel" data-bs-slide-to="0"
                         class="active" aria-current="true" aria-label="Slide 1"></button>
@@ -67,7 +66,7 @@
                 <form action="#" class="hero__content__form">
                     <input type="email" placeholder="E-mail" class="hero__content__form__input" required>
                     <button type="submit" class="hero__content__form__button">
-                        <span>Assinar agora</span>
+                        <a href="mailto:hecsalgueiros@gmail.com">Assine agora</a>
                     </button>
                 </form>
                 <a href="#" class="link-text">Confira os detalhes dos planos</a>
@@ -75,7 +74,60 @@
                     class="hero__content__partners-logos">
             </div>
         </section>
+        <section class="sport">
+            <div class="sport__content">
+                <h2 class="sport__content__branding">
+                    <img src="../src/images/logo/espn_disneyplus.png" alt="ESPN + Disney+">
+                </h2>
+                <p class="text pre-wrap">
+                    Os esportes da ESPN e os eventos ao 
+                    vivo que você ama estão no plano Premium do Disney+.
+                </p>
+                <button class="sport__content__button"><a href="https://www.linkedin.com/in/hectorsalg/">Assine agora</a></button>
+            </div>
+            
+            <div class="sport__carousel--wrapper">
+                <button class="sport__carousel__button prev" aria-label="Anterior">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="white">
+                        <path d="M15.41 7.41L14 6l-6 6 6 6 1.41-1.41L10.83 12z"/>
+                    </svg>
+                </button>
+                
+                <ul class="sport__carousel">
+                    <li>
+                        <img class="sport__carousel__item" src="../src/images/carousel-espn/laliga.jpg" alt="Laliga">
+                    </li>
+                    <li>
+                        <img class="sport__carousel__item" src="../src/images/carousel-espn/premiere_league.jpg" alt="Premier League">
+                    </li>
+                    <li>
+                        <img class="sport__carousel__item" src="../src/images/carousel-espn/nba.jpg" alt="NBA">
+                    </li>
+                    <li>
+                        <img class="sport__carousel__item" src="../src/images/carousel-espn/serie_a_italy.jpg" alt="Serie A Italy">
+                    </li>
+                    <li>
+                        <img class="sport__carousel__item" src="../src/images/carousel-espn/australian_open.jpg" alt="Australian Open">
+                    </li>
+                    <li>
+                        <img class="sport__carousel__item" src="../src/images/carousel-espn/nfl.jpg" alt="NFL">
+                    </li>
+                    <li>
+                        <img class="sport__carousel__item" src="../src/images/carousel-espn/woman_champions_league.jpg" alt="Woman Champions League">
+                    </li>
+                    <li>
+                        <img class="sport__carousel__item" src="../src/images/carousel-espn/atp.jpg" alt="ATP">
+                    </li>
+                </ul>
+                <button class="sport__carousel__button next" aria-label="Próximo">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="white">
+                        <path d="M8.59 16.59L10 18l6-6-6-6-1.41 1.41L13.17 12z"/>
+                    </svg>
+                </button>
+            </div>
+        </section>
     </main>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
+    <script src="./scripts/main.js"></script>
 </body>
 </html>

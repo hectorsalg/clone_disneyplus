@@ -1,0 +1,120 @@
+@use 'variables';
+@use "sass:color";
+
+.sport {
+    background-image: url(../../dist/images/carousel-espn/banner.jpg);
+    background-size: cover;
+    padding: 5.6vw;
+    padding-bottom: 0;
+    position: relative;
+
+    &__content {
+        text-align: left;
+        max-width: 800px;
+
+        p {
+            margin-bottom: 24px;
+        }
+
+        &__branding {
+            margin-bottom: 1rem;
+        }
+
+        &__button {
+            background-color: variables.$submitButtonColor;
+            color: variables.$textColorSubmit;
+            width: 40%;
+            height: 50px;
+            text-transform: uppercase;
+            letter-spacing: 1.76px;
+            border: none;
+            border-radius: 4px;
+            font-size: 16px;
+            cursor: pointer;
+            font-size: large;
+            margin-bottom: 70px;
+            transition: all 0.3s ease;
+
+            &:hover {
+                background-color: color.scale(variables.$submitButtonColor, $lightness: -30%);
+            }
+
+            a {
+                color: variables.$textColorSubmit;
+                text-decoration: none;
+            }
+        }
+    }
+
+    &__carousel {
+        display: flex;
+        gap: 1.5rem;
+        overflow-x: auto;
+        scroll-behavior: smooth;
+        padding: 20px 10px;
+        margin: 0;
+        list-style: none;
+        scrollbar-width: none;
+        -ms-overflow-style: none;
+
+        &::-webkit-scrollbar {
+            display: none;
+        }
+
+        li {
+            flex: 0 0 auto;
+        }
+
+        &--wrapper {
+            position: relative;
+            max-width: 100%;
+            overflow: hidden;
+        }
+
+        &__item {
+            width: 300px;
+            height: 180px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+        }
+
+        &__button {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            opacity: 0;
+            background: transparent;
+            border: none;
+            height: 100px;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: all 0.5s ease;
+            z-index: 10;
+
+            &:hover {
+                opacity: 1;
+                transform: translateY(-50%) scale(3);
+                transition: transform 0.3s ease;
+            }
+
+            &:disabled {
+                opacity: 0;
+                cursor: default;
+            }
+
+            svg {
+                width: 24px;
+                height: 24px;
+            }
+
+            &.prev {
+                left: 0;
+            }
+
+            &.next {
+                right: 0;
+            }
+        }
+    }
+}

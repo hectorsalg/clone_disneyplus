@@ -1,5 +1,6 @@
 @use 'hero';
-@use 'variables.scss';
+@use 'sports';
+@use 'variables';
 
 * {
     margin: 0;
@@ -69,4 +70,8 @@ body {
     @include text(18px);
     color: variables.$textSecondary;
     text-decoration: underline;
+}
+
+.pre-wrap {
+    white-space: pre-line;
 }
