@@ -72,6 +72,12 @@ body {
     text-decoration: underline;
 }
 
+.link-button {
+    @include text(18px);
+    color: variables.$inputColor;
+    text-decoration: none;
+}
+
 .pre-wrap {
     white-space: pre-line;
 }

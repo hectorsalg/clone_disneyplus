@@ -38,11 +38,6 @@
             &:hover {
                 background-color: color.scale(variables.$submitButtonColor, $lightness: -30%);
             }
-
-            a {
-                color: variables.$textColorSubmit;
-                text-decoration: none;
-            }
         }
     }
 
