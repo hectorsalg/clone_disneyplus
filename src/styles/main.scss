@@ -1,5 +1,6 @@
 @use 'hero';
 @use 'sports';
+@use 'ranking';
 @use 'variables';
 
 * {
@@ -9,7 +10,7 @@
 }
 
 body {
-    background-color: variables.$bgColor;
+    background-color: variables.$bgColor !important;
 }
 
 @mixin text($fontSize: 16px) {
