@@ -103,6 +103,13 @@ document.addEventListener('DOMContentLoaded', () => {
     updateButtonsRanking();
 
     setTimeout(updateButtonsRanking, 500);
+
+    // FAQ
+    const questions = document.querySelectorAll('[data-faq-question]')
+
+    for (let i = 0; i < questions.length; i++) {
+        questions[i].addEventListener('click', openFaq)
+    }
 });
 
 function toggleButtonPlay() {
@@ -118,4 +125,10 @@ function toggleButtonPlay() {
         carouselBootstrap.cycle();
         icon.classList.replace('fa-play', 'fa-pause');
     }
+}
+
+function openFaq(element) {
+    const father = element.target.parentNode;
+
+    father.classList.toggle('faq__questions__item--is-open')
 }
