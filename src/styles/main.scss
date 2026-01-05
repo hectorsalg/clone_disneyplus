@@ -2,6 +2,7 @@
 @use 'sports';
 @use 'ranking';
 @use 'subscriptions';
+@use 'cinema';
 @use 'variables';
 
 * {
@@ -74,6 +75,12 @@ body {
 
 .link-text {
     @include text(18px);
+    color: variables.$textSecondary;
+    text-decoration: underline;
+}
+
+.link-text--small {
+    @include text(14px);
     color: variables.$textSecondary;
     text-decoration: underline;
 }
