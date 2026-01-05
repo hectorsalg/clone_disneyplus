@@ -1,0 +1,14 @@
+.hero--screens {
+    padding: 5.6vw;
+
+    &__content {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+
+        img {
+            max-width: 100%;
+        }
+    }
+}
