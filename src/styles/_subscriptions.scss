@@ -1,0 +1,128 @@
+@use 'variables';
+@use "sass:color";
+
+.subscriptions {
+    text-align: center;
+    padding-top: 2.3vw;
+    padding-left: 5.6vw;
+    padding-right: 5.6vw;
+    
+    &__content {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        margin: auto;
+        margin-bottom: 48px;
+        width: 100%;
+        max-width: 1291px;
+        
+        
+        &__table {
+            margin: 24px 0;
+            width: 100%;
+            color: variables.$textTertiary;
+
+            .premium-bg {
+                background-color: #b7b8bd1a;
+            }
+            
+
+            &__header {
+                border-bottom: 1px solid color.scale(variables.$textSecondary, $alpha: -30%);
+
+                &__container {
+                    padding: 0.5rem 1rem;
+                    position: relative;
+                    padding-top: 2rem;
+
+                    .badge--popular {
+                        position: absolute;
+                        top: -14px;
+                        left: 50%;
+                        transform: translateX(-50%);
+                
+                        background-color: #fff;
+                        color: variables.$inputColor;
+                        padding: 6px 16px;
+                        border-radius: 24px;
+                        font-size: 13px;
+                        font-weight: 600;
+                
+                        box-shadow: 0 6px 18px rgba(0, 0, 0, 0.25);
+                    }
+
+                    &__button {
+                            background-color: variables.$submitButtonColor;
+                            color: variables.$textColorSubmit;
+                            padding: .5rem 1rem;
+                            text-decoration: none;
+                            width: 100%;
+                            max-width: 320px;
+                            height: 56px;
+                            text-transform: uppercase;
+                            border: none;
+                            border-radius: 4px;
+                            font-size: 16px;
+                            cursor: pointer;
+                            margin: 1rem 0;
+                    
+                            &:disabled {
+                                background-color: color.scale(variables.$submitButtonColor, $lightness: -30%);
+                                color: #fff;
+                    
+                                &:hover {
+                                    background-color: color.scale(variables.$submitButtonColor, $lightness: -40%);
+                                    transition: all 0.3s ease;
+                                }
+                            }
+                    
+                            &:hover {
+                                background-color: color.scale(variables.$submitButtonColor, $lightness: -30%);
+                                transition: all 0.3s ease;
+                            }
+                        }
+                }
+
+                &__text {
+                    font-size: 14px;
+                    font-weight: 400;
+                }
+            }
+
+            &__body {
+                
+                tr {
+                    border-bottom: 1px solid color.scale(variables.$textTertiary, $alpha: -90%);
+                }
+
+                i {
+                    font-size: 24px;
+                }
+            }
+
+            .premium {
+                color: variables.$textSecondary;
+            }
+        }
+
+        &__description {
+            text-align: start;
+
+            p {
+                margin: 0;
+                padding: 0;
+                line-height: 1;
+            }
+        }
+    }
+}
+
+th:first-child, td:first-child {
+    text-align: left;
+    width: 35%;
+}
+
+td {
+    padding: 1.5rem .5rem;
+}

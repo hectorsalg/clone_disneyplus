@@ -1,6 +1,7 @@
 @use 'hero';
 @use 'sports';
 @use 'ranking';
+@use 'subscriptions';
 @use 'variables';
 
 * {
@@ -39,6 +40,10 @@ body {
 
 .text--small {
     @include text(12px);
+}
+
+.text--smaller {
+    @include text(11px);
 }
 
 .title--big {

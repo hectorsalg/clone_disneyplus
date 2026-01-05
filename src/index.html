@@ -16,6 +16,13 @@
         <section class="hero">
             <div id="heroCarousel" class="carousel slide carousel-fade hero__background" data-bs-ride="carousel" data-bs-interval="3000" data-bs-pause="false">
                 <div class="carousel-indicators">
+                    <button
+                        type="button"
+                        class="carousel__indicator__icon--link"
+                        aria-label="Ir para esportes"
+                        onclick="location.href='#sport'">
+                        <i class="fa-solid fa-chevron-down"></i>
+                    </button>
                     <button type="button" data-bs-target="#heroCarousel" data-bs-slide-to="0"
                         class="active" aria-current="true" aria-label="Slide 1"></button>
                     <button type="button" data-bs-target="#heroCarousel" data-bs-slide-to="1"
@@ -28,6 +35,13 @@
                         aria-label="Slide 5"></button>
                     <button type="button" data-bs-target="#heroCarousel" data-bs-slide-to="5"
                         aria-label="Slide 6"></button>
+                    <button
+                        type="button"
+                        class="carousel__indicator__icon--play"
+                        aria-label="Ir para esportes"
+                        onclick="toggleButtonPlay()">
+                        <i class="fa-solid fa-pause"></i>
+                    </button>
                 </div>
 
                 <div class="carousel-inner">
@@ -74,7 +88,7 @@
                     class="hero__content__partners-logos">
             </div>
         </section>
-        <section class="sport">
+        <section class="sport" id="sport">
             <div class="sport__content">
                 <h2 class="sport__content__branding">
                     <img src="../src/images/logo/espn_disneyplus.png" alt="ESPN + Disney+">
@@ -248,8 +262,97 @@
                 </div>
             </div>
         </section>
+        <section class="subscriptions">
+            <h2 class="title ranking__content__title">Que plano você vai escolher?</h2>
+            <p class="text">Você pode alterar ou cancelar seu plano quando quiser.</p>
+            <div class="subscriptions__content">
+                <table class="subscriptions__content__table">
+                    <thead class="subscriptions__content__table__header">
+                        <tr>
+                            <th></th>
+                            <th class="premium premium-bg">
+                                <div class="subscriptions__content__table__header__container">
+                                    <span class="badge--popular">Mais popular</span>
+                                    <button class="subscriptions__content__table__header__container__button">
+                                        <span>premium</span>
+                                    </button>
+                                    <p class="subscriptions__content__table__header__text premium">
+                                        R$ 66,90/mês (inclui impostos)*
+                                    </p>
+                                </div>
+                            </th>
+                            <th>
+                                <div class="subscriptions__content__table__header__container">
+                                    <button disabled class="subscriptions__content__table__header__container__button">
+                                        <span>padrão</span>
+                                    </button>
+                                    <p class="subscriptions__content__table__header__text">
+                                        R$ 46,90/mês (inclui impostos)*
+                                    </p>
+                                </div>
+                            </th>
+                            <th>
+                                <div class="subscriptions__content__table__header__container">
+                                    <button disabled class="subscriptions__content__table__header__container__button">
+                                        <span>padrão com anúncios</span>
+                                    </button>
+                                    <p class="subscriptions__content__table__header__text">
+                                        R$ 27,99/mês (inclui impostos)*
+                                    </p>
+                                </div>
+                            </th>
+                        </tr>
+                    </thead>
+                    <tbody class="subscriptions__content__table__body">
+                        <tr>
+                            <td>Todos os canais da ESPN, torneios exclusivos e mais de 500 eventos esportivos por mês**</td>
+                            <td class="premium premium-bg"><i class="fa-solid fa-check"></i></td>
+                            <td><i class="fa-solid fa-minus"></i></td>
+                            <td><i class="fa-solid fa-minus"></i></td>
+                        </tr>
+                        <tr>
+                            <td>Estreias de filmes, séries originais e clássicos da Disney, Pixar, Marvel, Star Wars, National Geographic e Hulu</td>
+                            <td class="premium premium-bg"><i class="fa-solid fa-check"></td>
+                            <td class="premium"><i class="fa-solid fa-check"></td>
+                            <td class="premium"><i class="fa-solid fa-check"></td>
+                        </tr>
+                        <tr>
+                            <td>Filmes e séries sem intervalos comerciais****</td>
+                            <td class="premium premium-bg"><i class="fa-solid fa-check"></td>
+                            <td class="premium"><i class="fa-solid fa-check"></td>
+                            <td><i class="fa-solid fa-minus"></i></td>
+                        </tr>
+                        <tr>
+                            <td>Vídeo até 4K UHD/HDR e som Dolby Atmos****</td>
+                            <td class="premium premium-bg"><i class="fa-solid fa-check"></td>
+                            <td><i class="fa-solid fa-minus"></i></td>
+                            <td><i class="fa-solid fa-minus"></i></td>
+                        </tr>
+                        <tr>
+                            <td>Dispositivos simultâneos</td>
+                            <td class="premium premium-bg">4</td>
+                            <td>2</td>
+                            <td>2</td>
+                        </tr>
+                        <tr>
+                            <td>Downloads para assistir aos seus favoritos offline e sem demora</td>
+                            <td class="premium premium-bg"><i class="fa-solid fa-check"></td>
+                            <td class="premium"><i class="fa-solid fa-check"></td>
+                            <td><i class="fa-solid fa-minus"></td>
+                        </tr>
+                    </tbody>
+                </table>
+                <div class="subscriptions__content__description">
+                    <p><span class="text--smaller">* O preço pode variar caso a assinatura seja feita através de outras plataformas. Empresas parceiras podem cobrar taxas adicionais.</span><br>
+                    <span class="text--smaller">** Todos os canais básicos da ESPN estão disponíveis apenas no plano Premium. As transmissões ao vivo de esportes e outros eventos contêm anúncios.</span><br>
+                    <span class="text--smaller">*** Todos os planos podem incluir anúncios em conteúdos ao vivo (mesmo em reprises) e eventos especiais, antes e depois da reprodução do conteúdo, promoções de produtos e serviços Disney, patrocínios, inserção de publicidade e similares. Plano Padrão com anúncios: os dispositivos compatíveis podem variar e não é possível baixar conteúdo.</span><br>
+                    <span class="text--smaller">**** A qualidade de vídeo e áudio e os downloads estão sujeitos ao serviço de internet, aos recursos do dispositivo, ao tipo de conteúdo e ao plano.</span></p>
+                </div>
+            </div>
+        </section>
     </main>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
+    <script src="https://kit.fontawesome.com/4cb44ad3e7.js" crossorigin="anonymous"></script>
     <script src="./scripts/main.js"></script>
 </body>
 </html>

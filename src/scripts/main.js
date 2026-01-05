@@ -104,3 +104,18 @@ document.addEventListener('DOMContentLoaded', () => {
 
     setTimeout(updateButtonsRanking, 500);
 });
+
+function toggleButtonPlay() {
+    const btnPlay = document.querySelector('.carousel__indicator__icon--play')
+    const icon = btnPlay.querySelector('i');
+    const carouselEl = document.querySelector('#heroCarousel');
+    const carouselBootstrap = bootstrap.Carousel.getOrCreateInstance(carouselEl);
+
+    if (icon.classList.contains('fa-pause')) {
+        carouselBootstrap.pause();
+        icon.classList.replace('fa-pause', 'fa-play');
+    } else {
+        carouselBootstrap.cycle();
+        icon.classList.replace('fa-play', 'fa-pause');
+    }
+}
