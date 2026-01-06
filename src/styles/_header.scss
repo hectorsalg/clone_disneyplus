@@ -1,0 +1,29 @@
+@use 'variables';
+
+.header {
+    &__container {
+        position: absolute;
+        padding: 8px 36px;
+        width: 100%;
+        display: flex;
+        justify-content: flex-end;
+
+        &__button {
+            position: relative;
+            z-index: 4;
+            text-decoration: none;
+            text-transform: uppercase;
+            color: variables.$textSecondary;
+            padding: .7rem 1rem;
+            background-color: rgba(0, 0, 0, .8);
+            border: 2px solid #67617b;
+            border-radius: 4px;
+
+            &:hover {
+                color: rgba(0, 0, 0, .8);
+                background-color: #fff;
+                border-color: #fff;
+            }
+        }
+    }
+}
