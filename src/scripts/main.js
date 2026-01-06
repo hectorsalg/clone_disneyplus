@@ -118,12 +118,12 @@ function toggleButtonPlay() {
     const carouselEl = document.querySelector('#heroCarousel');
     const carouselBootstrap = bootstrap.Carousel.getOrCreateInstance(carouselEl);
 
-    if (icon.classList.contains('fa-pause')) {
+    if (icon.classList.contains('fa-grip-lines-vertical')) {
         carouselBootstrap.pause();
-        icon.classList.replace('fa-pause', 'fa-play');
+        icon.classList.replace('fa-grip-lines-vertical', 'fa-play');
     } else {
         carouselBootstrap.cycle();
-        icon.classList.replace('fa-play', 'fa-pause');
+        icon.classList.replace('fa-play', 'fa-grip-lines-vertical');
     }
 }
 
