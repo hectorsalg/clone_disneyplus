@@ -15,14 +15,17 @@
 
     .carousel-indicators {
         z-index: 2;
-        top: 55rem;
+        top: 90vh;
         margin-left: 0;
 
         @include variables.mobile {
-            top: auto;
-            bottom: 2rem;
-            margin-bottom: 0;
-        }
+                top: 20vh;
+                transform: translateY(-50%);
+                left: 95vw;
+                margin-bottom: 0;
+                flex-direction: column;
+                width: auto;
+            }
     
         button {
             position: relative;
@@ -35,6 +38,12 @@
             margin: 1px;
             padding: 0;
             cursor: pointer;
+
+            @include variables.mobile {
+                width: 2px;
+                height: 30px;
+                margin: 4px 0;
+            }
     
             &::before {
                 content: "";
@@ -43,12 +52,22 @@
                 bottom: -10px;
                 left: 0;
                 right: 0;
+
+                @include variables.mobile {
+                    left: -15px;
+                    right: -15px;
+                }
             }
     
             &.active {
                 height: 3px;
                 border-radius: 5px;
                 opacity: .7;
+
+                @include variables.mobile {
+                    height: 30px;
+                    width: 3px;
+                }
             }
         }
     }
@@ -71,6 +90,12 @@
         flex-direction: column;
         justify-content: center;
         align-items: self-start;
+
+        pointer-events: none;
+        
+        &>* {
+            pointer-events: auto;
+        }
 
         @include variables.mobile {
             padding: 2rem;
@@ -164,6 +189,10 @@
         opacity: 1 !important;
         filter: none !important;
         margin-right: 48px !important;
+
+        @include variables.mobile {
+            display: none !important;
+        }
 
         i {
             font-size: 24px;
