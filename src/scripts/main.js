@@ -110,6 +110,16 @@ document.addEventListener('DOMContentLoaded', () => {
     for (let i = 0; i < questions.length; i++) {
         questions[i].addEventListener('click', openFaq)
     }
+
+    // Footer Mobile
+    const footerToggles = document.querySelectorAll('[data-footer-toggle]');
+
+    footerToggles.forEach(toggle => {
+        toggle.addEventListener('click', () => {
+            const column = toggle.closest('.footer__accordion');
+            column.classList.toggle('footer__accordion--is-open');
+        });
+    });
 });
 
 function toggleButtonPlay() {

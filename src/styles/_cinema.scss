@@ -14,8 +14,22 @@
         gap: 1.5rem;
         padding: 20px 2vw 0;
 
+        @include variables.mobile {
+            flex-direction: column;
+            padding: 0;
+        }
+
         img {
             max-width: 50%;
+
+            @include variables.mobile {
+                max-width: 100%;
+            }
+        }
+
+        @include variables.mobile {
+            flex-direction: column;
+            padding: 0;
         }
 
         &__info {
@@ -29,10 +43,17 @@
                 font-size: 14px;
             }
 
+            @include variables.mobile {
+                max-width: 100%;
+                text-align: center;
+                padding-top: 2rem;
+            }
+
             &__button {
                 background-color: variables.$submitButtonColor;
                 color: variables.$textColorSubmit;
-                width: 40%;
+                width: 100%;
+                max-width: 320px;
                 height: 50px;
                 text-transform: uppercase;
                 letter-spacing: 1.76px;
@@ -41,8 +62,12 @@
                 font-size: 16px;
                 cursor: pointer;
                 font-size: large;
-                margin-bottom: 70px;
+                margin: 24px 0;
                 transition: all 0.3s ease;
+
+                @include variables.mobile {
+                    width: 60%;
+                }
 
                 &:hover {
                     background-color: color.scale(variables.$submitButtonColor, $lightness: -30%);

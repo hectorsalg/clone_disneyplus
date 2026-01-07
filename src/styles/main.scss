@@ -19,78 +19,88 @@ body {
     background-color: variables.$bgColor !important;
 }
 
-@mixin text($fontSize: 16px) {
-    font-size: $fontSize;
-    line-height: $fontSize * 1.4;
-    color: variables.$textPrimary;
-    font-family: "Inter", sans-serif;
-    font-weight: 300;
-}
-
-@mixin title($fontSize: 40px) {
-    font-size: $fontSize;
-    line-height: $fontSize * 1.2;
-    color: variables.$textSecondary;
-    font-weight: 700;
-    margin: 1.5rem 0;
-}
-
 .text--big {
-    @include text(18px);
+    @include variables.text(18px);
 }
 
 .text {
-    @include text;
+    @include variables.text;
+
+    @include variables.mobile {
+        @include variables.text(14px);
+    }
 }
 
 .text--small {
-    @include text(12px);
+    @include variables.text(12px);
 }
 
 .text--smaller {
-    @include text(11px);
+    @include variables.text(11px);
 }
 
 .title--big {
-    @include title(44px);
+    @include variables.title(44px);
 }
 
 .title {
-    @include title;
+    @include variables.title;
+
+    @include variables.mobile {
+        @include variables.title(32px);
+    }
 }
 
 .title--small {
-    @include title(32px);
+    @include variables.title(32px);
     font-weight: 600;
+
+    @include variables.mobile {
+        @include variables.title(24px);
+    }
 }
 
 .title--smaller {
-    @include title(24px);
+    @include variables.title(24px);
     color: variables.$textPrimary;
     margin-top: 0;
     font-weight: 600;
+
+    @include variables.mobile {
+        @include variables.title(16px);
+        letter-spacing: 0;
+    }
 }
 
 .title--smaller-white {
-    @include title(24px);
+    @include variables.title(24px);
     font-weight: 600;
+
+    @include variables.mobile {
+        @include variables.title(16px);
+        letter-spacing: 0;
+    }
 }
 
 
 .link-text {
-    @include text(18px);
+    @include variables.text(18px);
     color: variables.$textSecondary;
     text-decoration: underline;
+
+    @include variables.mobile {
+        @include variables.text(16px);
+    }
 }
 
 .link-text--small {
-    @include text(14px);
+    @include variables.text(14px);
     color: variables.$textSecondary;
     text-decoration: underline;
 }
 
 .link-button {
-    @include text(18px);
+    @include variables.text(18px);
     color: variables.$inputColor;
     text-decoration: none;
 }

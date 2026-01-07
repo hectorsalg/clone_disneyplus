@@ -1,3 +1,5 @@
+@use 'variables';
+
 .ranking {
 
     &__content {
@@ -53,6 +55,10 @@
             border: 3px solid transparent;
             will-change: transform;
 
+            @include variables.mobile {
+                width: 40vw;
+            }
+
             &:hover {
                 transform: scale(1.05);
                 padding: 4px;
@@ -80,6 +86,10 @@
                     max-width: 80%;
                     max-height: 80px;
                     object-fit: contain;
+
+                    @include variables.mobile {
+                        max-height: 44px;
+                    }
                 }
 
                 &__details {
@@ -91,6 +101,11 @@
                     img {
                         min-width: 30px;
                         height: 16px;
+                    }
+
+                    @include variables.mobile {
+                        margin: 0;
+                        margin-top: 8px;
                     }
                 }
             }

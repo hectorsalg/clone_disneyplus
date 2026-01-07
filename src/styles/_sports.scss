@@ -8,9 +8,24 @@
     padding-bottom: 0;
     position: relative;
 
+    @include variables.mobile {
+        background-image: url(../../dist/images/carousel-espn/banner-sm.jpg);
+        background-size: cover;
+        background-repeat: no-repeat;
+    }
+
+    
     &__content {
         text-align: left;
         max-width: 800px;
+        
+        @include variables.mobile {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            padding-top: 15vh;
+        }
 
         p {
             margin-bottom: 24px;
@@ -18,6 +33,12 @@
 
         &__branding {
             margin-bottom: 1rem;
+
+            img {
+                @include variables.mobile {
+                    height: 88px;
+                }
+            }
         }
 
         &__button {
@@ -34,6 +55,11 @@
             font-size: large;
             margin-bottom: 70px;
             transition: all 0.3s ease;
+
+            @include variables.mobile {
+                max-width: 320px;
+                width: 100%;
+            }
 
             &:hover {
                 background-color: color.scale(variables.$submitButtonColor, $lightness: -30%);
@@ -67,9 +93,14 @@
         }
 
         &__item {
-            width: 300px;
-            height: 180px;
+            max-width: 300px;
+            max-height: 180px;
             box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+            object-fit: cover;
+
+            @include variables.mobile {
+                width: 35vw;
+            }
         }
 
         &__button {

@@ -6,3 +6,27 @@ $inputColor: #31343e;
 $submitButtonColor: #02d6e8;
 $shopButtonColor: #3df;
 $textColorSubmit: #02172a;
+
+$mobile-breakpoint: 768px;
+
+@mixin mobile {
+    @media (max-width: $mobile-breakpoint) {
+        @content;
+    }
+}
+
+@mixin text($fontSize: 16px) {
+    font-size: $fontSize;
+    line-height: $fontSize * 1.4;
+    color: $textPrimary;
+    font-family: "Inter", sans-serif;
+    font-weight: 300;
+}
+
+@mixin title($fontSize: 40px) {
+    font-size: $fontSize;
+    line-height: $fontSize * 1.2;
+    color: $textSecondary;
+    font-weight: 700;
+    margin: 1.5rem 0;
+}

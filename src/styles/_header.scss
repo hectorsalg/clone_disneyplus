@@ -3,10 +3,14 @@
 .header {
     &__container {
         position: absolute;
-        padding: 8px 36px;
+        padding: .5rem 2rem;
         width: 100%;
         display: flex;
         justify-content: flex-end;
+
+        @include variables.mobile {
+            padding: .5rem 1rem;
+        }
 
         &__button {
             position: relative;
@@ -18,6 +22,10 @@
             background-color: rgba(0, 0, 0, .8);
             border: 2px solid #67617b;
             border-radius: 4px;
+
+            @include variables.mobile {
+                padding: .5rem .7rem;
+            }
 
             &:hover {
                 color: rgba(0, 0, 0, .8);
