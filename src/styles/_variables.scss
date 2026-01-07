@@ -6,6 +6,9 @@ $inputColor: #31343e;
 $submitButtonColor: #02d6e8;
 $shopButtonColor: #3df;
 $textColorSubmit: #02172a;
+$white: #fff;
+$black: #000;
+$shadow: rgba(0, 0, 0, 0.3);
 
 $mobile-breakpoint: 768px;
 
@@ -29,4 +32,53 @@ $mobile-breakpoint: 768px;
     color: $textSecondary;
     font-weight: 700;
     margin: 1.5rem 0;
+}
+
+@mixin hide-scrollbar {
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+
+    &::-webkit-scrollbar {
+        display: none;
+    }
+}
+
+@mixin carousel-button {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    opacity: 0;
+    background: transparent;
+    border: none;
+    height: 100%;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.5s ease;
+    z-index: 10;
+
+    &:hover {
+        opacity: 1;
+        transform: translateY(-50%) scale(3);
+        transition: transform 0.3s ease;
+    }
+
+    &:disabled {
+        opacity: 0;
+        cursor: default;
+    }
+
+    svg {
+        width: 24px;
+        height: 24px;
+    }
+
+    &.prev {
+        left: 0;
+    }
+
+    &.next {
+        right: 0;
+    }
 }
